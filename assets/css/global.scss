@@ -6,3 +6,77 @@ body{
 .form-label{
     margin-top: 10px;
 }
+
+/*  header  */
+.header{
+    background-color: antiquewhite;
+    border-top: 4px solid green;
+}
+
+.header .row{
+   display: flex;
+}
+
+.header-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    max-height: max-content;
+}
+
+.header-right h3{
+    font-size: 1.3em;
+    margin-top: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.header-right e{
+    color: green;
+}
+
+.header-right img{
+    height: 80px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.header-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    max-height: max-content;
+}
+
+.header-middle h4{
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+.header-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+
+.header-left button{
+    background-color: rgba(0, 128, 0, 0);
+    color: green;
+    height: 40px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid green;
+    transition: 0.4s;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header-left button:hover{
+    transition: 0.4s;
+    background-color: green;
+    color: white;
+}
