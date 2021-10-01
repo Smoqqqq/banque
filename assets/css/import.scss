@@ -1,3 +1,34 @@
 body{
-    background: red;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*  header  */
+.header{
+    background-color: antiquewhite;
+    border-top: 4px solid green;
+}
+
+.header .row{
+   display: flex;
+}
+
+.header-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-height: max-content;
+}
+
+.header-right img{
+    height: 80px;
+}
+
+.header-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
 }
