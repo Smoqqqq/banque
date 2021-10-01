@@ -16,8 +16,6 @@
 
 <body>
     <?php include $page ?>
-    
-    <?php include "js-bottom.php" ?>
 </body>
 
 </html>
