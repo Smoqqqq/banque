@@ -2,11 +2,13 @@
 
     $routes = array(
         "home" => $base."",
+        "inscription" => "inscription"
     );
 
     $description_default = "";
     $keyword_default = "";
     $metas = array(
         //page => meta title, meta description, meta keywords
-        "home" => array("Le Flem Paul | Portfolio", "Développeur web front & back, je réalise votre projet de site internet, référencement optimisé et site de qualité irréprochable", "Développeur web"),
+        "home" => array("Accueil - Fortnua banque", "Accueil - Fortnua banque", "Accueil - Fortnua banque"),
+        "inscription" => array("Inscription", "Ouvrez votre compte", "")
     );
