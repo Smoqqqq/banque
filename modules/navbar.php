@@ -4,7 +4,7 @@
             <a href="<?=$routes['home']?>"><img src="assets/img/logo.png" alt=""><p><h3><e>Fortuna</e><br>Banque</h3></p></a>
             </div>
             <div class="col-4  header-middle">
-                <h4>Créer un compte un gagner de l'argents</h4>
+                <h4>Créer un compte, gagnez de l'argent</h4>
             </div>
             <div class="col-4  header-right">
                 <button>Déja client ?</button>
