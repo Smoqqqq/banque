@@ -13,7 +13,7 @@ Options +FollowSymlinks
 #RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 #RewriteRule ^([_a-z0-9]*)$ index.php [L]
 #RewriteRule ^(.*)$ index.php [L]
-RewriteRule !\.(js|ico|txt|gif|jpg|png|css|less|otf|eot|svg|ttf|woff|pdf|zip|xml)$ index.php
+RewriteRule !\.(js|ico|txt|gif|jpg||jpeg|png|css|less|otf|eot|svg|ttf|woff|pdf|zip|xml)$ index.php
 
 ErrorDocument 404 /Template_v4/index.php 
 ErrorDocument 403 /Template_v4//index.php
@@ -36,7 +36,7 @@ SetOutputFilter DEFLATE
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
 
-    ExpiresByType text/css "access 1 year
+    ExpiresByType text/css "access 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType application/x-javascript "access plus 1 year"
 </IfModule>

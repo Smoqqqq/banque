@@ -1,6 +1,7 @@
 body{
     background: #F7F7F7;
     margin: 0px;
+    padding-top: 80px;
 }
 
 .form-label{
@@ -9,8 +10,13 @@ body{
 
 /*  header  */
 .header{
-    background-color: antiquewhite;
-    border-top: 4px solid green;
+    background-color: rgb(255, 255, 255);
+    border-top: 4px solid $green;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    left: 0px;
+    right: 0px;
 }
 
 .header .row{
@@ -24,18 +30,25 @@ body{
     align-items: center;
     width: 33%;
     max-height: max-content;
-    img{
-        height: 80px;
-        margin-right: 10px;
-        margin-top: 5px;
+    button{
+        background-color: rgba(0, 128, 0, 0);
+        color: $green;
+        padding: 10px 15px;
+        border-radius: 30px;
+        border: 2px solid $green;
+        transition: 0.4s;
+        font-weight: 400;
+        cursor: pointer;
+        &:hover{
+            transition: 0.4s;
+            background-color: $green;
+            color: white;
+        }
     }
-    h3{
-    font-size: 1.3em;
-    margin-top: 20px;
-    font-family: 'IBM Plex Sans', sans-serif;
-    }
-    e{
-        color: green;
+    a{
+        margin-left: 15px;
+        text-decoration: none;
+        color: black;
     }
 }
 
@@ -59,19 +72,120 @@ body{
     justify-content: center;
     align-items: center;
     width: 33%;
-    button{
-        background-color: rgba(0, 128, 0, 0);
-        color: green;
-        padding: 10px 15px;
-        border-radius: 20px;
-        border: 2px solid green;
-        transition: 0.4s;
-        font-weight: 400;
-        cursor: pointer;
+    img{
+        height: 80px;
+        margin-right: 10px;
+        margin-top: 5px;
     }
-    button:hover{
+    h3{
+    font-size: 1.3em;
+    margin-top: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    }
+    e{
+        color: $green;
+    }
+    a{
+        flex-direction: row;
+        text-decoration: none;
+        display: flex;
+        color: black;
+    }
+}
+
+#header{
+    background-image: url("../img/LEAME.jpeg");
+    height: 91vh;
+    width: 100vw;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    h1{
+        color: white;
+        font-size: 2.5em;
+        text-align: center;
+        text-shadow: 0px 0px 5px black;
+        width: 100%;
+    }
+    #center{
+        #bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            &::after{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                background: white;
+                height: 100%;
+                content: "";
+                top: 0px;
+            }
+            >div{
+                width: 50%;
+            }
+        }
+        margin: auto;
+        max-width: 1000px;
+    }
+}
+
+.button{
+    background-color: rgba(0, 128, 0, 0);
+    color: $green;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid white;
+    transition: 0.4s;
+    font-weight: 400;
+    cursor: pointer;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    margin-top: 50px;
+    &:hover{
         transition: 0.4s;
-        background-color: green;
+        background-color: white;
+        color: black;
+    }
+}
+
+.card{
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px #686868;
+}
+
+.cartedroite{
+    background: rgba(0, 0, 0, 0.27);
+    border: white 2px solid;
+    h3{
         color: white;
     }
+    h4{
+        text-align: center;
+        color: white;
+        font-size: 1.3em;
+    }
+}
+
+.cartegauche{
+    background: rgba(0, 0, 0, 0.27);
+    border: white 2px solid;
+    h3{
+        color: white;
+    }
+    h4{
+        text-align: center;
+        color: white;
+        font-size: 1.3em;
+    }
+}
+
+.gauflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
