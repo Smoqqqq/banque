@@ -24,27 +24,6 @@ AddCharset UTF-8 .html
 SetOutputFilter DEFLATE
 #AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
 
-<<<<<<< HEAD
-=======
-<IfModule mod_expires.c>
-
-    # Enable expirations
-    ExpiresActive On
-    ExpiresDefault "access plus 1 year"
-
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/jpeg "access plus 1 year"
-
-    ExpiresByType text/css "access 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType application/x-javascript "access plus 1 year"
-
-</IfModule>
-
->>>>>>> 0394cb031bc5b7ef16a39f51c2dede6b301d97e9
 <IfModule mod_headers.c>
     Header set Connection keep-alive
 </IfModule>
