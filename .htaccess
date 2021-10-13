@@ -12,7 +12,7 @@ Options +FollowSymlinks
 #RewriteCond %{HTTP_HOST} !^www\.
 #RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 #RewriteRule ^([_a-z0-9]*)$ index.php [L]
-#RewriteRule ^(.*)$ index.php [L]
+RewriteRule ^(.*)$ index.php [L]
 RewriteRule !\.(js|ico|txt|gif|jpg||jpeg|png|css|less|otf|eot|svg|ttf|woff|pdf|zip|xml)$ index.php
 
 ErrorDocument 404 /Template_v4/index.php 
