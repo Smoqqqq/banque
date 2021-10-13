@@ -7,8 +7,8 @@
                 <h4>Créer un compte, gagnez de l'argent</h4>
             </div>
             <div class="col-4  header-right">
-                <button>Déja client ?</button>
-                <a href="<?=$routes['inscription']?>">Inscription</a>
+                <a href="<?=$routes['connexion']?>">Déja client ?</a>
+                <a class="connexion" href="<?=$routes['inscription']?>">Inscription</a>
             </div>
         </div>
     </div>
