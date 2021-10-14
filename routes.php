@@ -5,6 +5,7 @@
         "inscription" => "inscription",
         "connexion" => "connexion",
         "carte" => "carte",
+        "compte" => "compte",
     );
 
     $description_default = "";
@@ -15,5 +16,6 @@
         "inscription" => array("Inscription", "Ouvrez votre compte", ""),
         "connexion" => array("Connexion", "Connectez vous !", ""),
         "carte" => array("carte", "Obtenir une carte bancaire", ""),
+        "compte" => array("compte", "Afficher les informations de votre compte", ""),
 
     );

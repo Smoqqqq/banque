@@ -67,12 +67,19 @@ body{
     align-items: center;
     width: 33%;
     max-height: max-content;
-    h4{
-        text-transform: uppercase;
-        font-size: 1.3em;
-        text-align: center;
-        margin: 0px;
-        font-family: 'Kanit', sans-serif;
+    .col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        svg{
+            transform: rotate(90deg);
+            text-align: center;
+        }
     }
 }
 
