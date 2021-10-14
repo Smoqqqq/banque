@@ -6,6 +6,7 @@
         "connexion" => "connexion",
         "carte" => "carte",
         "compte" => "compte",
+        "mescartes" => "mescartes",
     );
 
     $description_default = "";
@@ -17,5 +18,6 @@
         "connexion" => array("Connexion", "Connectez vous !", ""),
         "carte" => array("carte", "Obtenir une carte bancaire", ""),
         "compte" => array("compte", "Afficher les informations de votre compte", ""),
+        "mescartes" => array("compte", "Afficher mes cartes", ""),
 
     );

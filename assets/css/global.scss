@@ -75,10 +75,17 @@ body{
             text-decoration: none;
             text-align: center;
             color: black;
+            border-bottom: 2px solid rgba(0, 0, 0, 0);
+            transition: 0,3;
+            &:hover{
+                border-bottom: 2px solid $green;
+                transition: 0,3;
+            }
         }
         svg{
             transform: rotate(90deg);
             text-align: center;
+            color: $green !important;
         }
     }
 }
