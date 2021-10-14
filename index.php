@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php include "functions/scss.php"; ?>
 <?php include "router.php"; ?>
 <?php include "functions/functions.php"; ?>

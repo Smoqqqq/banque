@@ -1,6 +1,7 @@
 # banque
 ## Comment commencer 
 Installer scssphp :
+    cd functions/
     git clone https://github.com/scssphp/scssphp.git
 
 # Cahier des charges
