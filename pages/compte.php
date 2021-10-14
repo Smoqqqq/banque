@@ -16,7 +16,7 @@
                     <th scope="row">1</th>
                     <td>Nom :</td>
                     <td></td>
-                    <td>@mdo</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
@@ -63,3 +63,12 @@
         </table>
     </div>
 </div>
+
+<?php 
+
+function afficherLesDonnées(){
+    $sql = "SELECT * FROM users WHERE email = :email";
+    
+}
+
+?>
