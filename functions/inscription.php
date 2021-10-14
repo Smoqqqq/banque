@@ -32,9 +32,8 @@ if (isset($_POST['register'])) {
 
         $result = $query->fetch(PDO::FETCH_OBJ);
 
-        if (!$result) {
-            $sql = "INSERT INTO users 
-        (`id`, `email`, `pass`, `role`, `created_at`, `type`, `country`, `address`, `civility`, `firstname`, `lastname`, `date_of_birth`) VALUES (NULL, `:email`, `:password`, `:role`, `:created_at`, `:type`, `:country`, `:address`, `:civility`, `:firstname`; `:lastname`, `:date_of_birth`)";
+        if (!$result){
+            $sql = "INSERT INTO users VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth)";
 
             $query = $dbh->prepare($sql);
             // var_dump($email);
