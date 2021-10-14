@@ -206,3 +206,13 @@ body{
     align-items: center;
 }
 
+.notification{
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    background: $green;
+    border-radius: 10px;
+    p{
+        margin: 10px 15px;
+    }
+}

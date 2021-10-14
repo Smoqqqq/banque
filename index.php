@@ -1,5 +1,7 @@
 <?php include "functions/scss.php"; ?>
 <?php include "router.php"; ?>
+<?php include "functions/functions.php"; ?>
+<?php include "functions/db.php"; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,6 +20,9 @@
 </head>
 
 <body>
+
+    <?php printNotification(); ?>
+
     <?php include("modules/navbar.php"); ?>
 
     <?php include $page ?>
