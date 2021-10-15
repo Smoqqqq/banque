@@ -1,8 +1,11 @@
-<?php 
-include('functions/compte.php'); 
+<?php
+include('functions/compte.php');
 ?>
 <div class="container-fluid princCompte">
     <div class="contenue">
+        <div class="text-left my-4">
+            <a href="<?= $routes['comptes/dashboard']; ?>" class="btn btn-outline-primary">Historique des transactions</a>
+        </div>
         <h1>Mon compte :</h1>
         <h3>Information personnelles :</h3>
         <table class="table">
@@ -39,18 +42,8 @@ include('functions/compte.php');
                 </tr>
                 <tr>
                     <th scope="row">5</th>
-                    <td colspan="2">Rue :</td>
-                    <td><?= $result->street ?> </td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td colspan="2">Numéro Téléphone :</td>
-                    <td><?= $result->number ?> </td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td colspan="2">Ville :</td>
-                    <td><?= $result->city ?> </td>
+                    <td colspan="2">Adresse :</td>
+                    <td><?= $result->address ?> </td>
                 </tr>
                 <tr>
                     <th scope="row">8</th>
@@ -65,15 +58,14 @@ include('functions/compte.php');
                 <tr>
                     <th scope="row">10</th>
                     <td colspan="2">Type de compte :</td>
-                    <td><?= $result->account_type ?> </td>
+                    <td><?= $result->type ?> </td>
                 </tr>
                 <tr>
                     <th scope="row">11</th>
                     <td colspan="2">Date de création du compte:</td>
-                    <td><?= $result->date ?> </td>
+                    <td><?= $result->created_at ?> </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
-
