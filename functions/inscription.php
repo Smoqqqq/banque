@@ -3,7 +3,6 @@
 use ScssPhp\ScssPhp\Value\Value;
 
 if (isset($_POST['register'])) {
-    // user
     $email = $_POST['email'];
     $created_at = date("d/m/Y");
     $role = "ROLE_USER";
@@ -32,19 +31,10 @@ if (isset($_POST['register'])) {
 
         $result = $query->fetch(PDO::FETCH_OBJ);
 
-        if (!$result){
+        if (!$result) {
             $sql = "INSERT INTO users VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth)";
 
             $query = $dbh->prepare($sql);
-            // var_dump($email);
-            // var_dump($created_at);
-            // var_dump($password);
-            // var_dump($role);
-            // var_dump($type);
-            // var_dump($country);
-            // var_dump($address);
-            // var_dump($civility);
-            // die();
             $query->bindParam(":email", $email, PDO::PARAM_STR);
             $query->bindParam(":created_at", $created_at, PDO::PARAM_STR);
             $query->bindParam(":password", $password, PDO::PARAM_STR);

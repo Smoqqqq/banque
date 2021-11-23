@@ -21,3 +21,26 @@ function printNotification(){
         </script>
     <?php }
 }
+
+function asset($asset){
+    global $slug;
+    $offset = "";
+    $array = explode("/", $slug);
+    $i = 0;
+    foreach($array as $tab){
+        if($i > 0) $offset .= "../";
+        $i++;
+    }   
+    return $offset . $asset;
+}
+
+function getClientId(){
+    global $dbh;
+    $login = $_SESSION['login'];
+    $sql = "SELECT id FROM users WHERE email = :email";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(":email", $login, PDO::PARAM_STR);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_OBJ);
+    return $result->id;
+}
