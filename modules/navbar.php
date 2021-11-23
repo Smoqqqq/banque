@@ -1,4 +1,4 @@
-<div class="header">
+<nav id="navbar">
     <div class="row">
         <div class="col-3 header-left">
             <a href="<?= $routes['home'] ?>"><img src="<?= asset("assets/img/logo.png"); ?>" alt="">

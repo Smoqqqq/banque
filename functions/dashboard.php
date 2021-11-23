@@ -1,5 +1,5 @@
 <?php
-$id = intval(getClientId());
+$id = getClientId();
 $sql = "SELECT * FROM account WHERE user_id = :id";
 $query = $dbh->prepare($sql);
 $query->bindParam(":id", $id, PDO::PARAM_INT);

@@ -1,8 +1,8 @@
 <?php
 include('functions/compte.php');
 ?>
-<div class="container-fluid princCompte">
-    <div class="contenue">
+<div class="container-fluid princCompte py-5">
+    <div class="contenue my-5">
         <div class="text-left my-4">
             <a href="<?= $routes['comptes/dashboard']; ?>" class="btn btn-outline-primary">Historique des transactions</a>
         </div>
