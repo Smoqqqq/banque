@@ -5,16 +5,12 @@
         "inscription" => "inscription",
         "connexion" => "connexion",
         "carte" => "carte",
-        "compte" => "compte",
+        "compte/compte" => "compte/compte",
         "mescartes" => "mescartes",
         "logout" => "deconnexion",
-        "comptes/dashboard" => "compte/dashboard",
-        "comptes/compte" => "compte/compte",
+        "compte/dashboard" => "compte/dashboard",
+        "compte/compte" => "compte/compte",
     );
-
-    foreach($routes as $route){
-        $route = $base . $route;
-    }
 
     $description_default = "";
     $keyword_default = "";
@@ -24,9 +20,10 @@
         "inscription" => array("Inscription", "Ouvrez votre compte", ""),
         "connexion" => array("Connexion", "Connectez vous !", ""),
         "carte" => array("carte", "Obtenir une carte bancaire", ""),
-        "compte" => array("compte", "Afficher les informations de votre compte", ""),
+        "compte/compte" => array("compte", "Afficher les informations de votre compte", ""),
         "mescartes" => array("compte", "Afficher mes cartes", ""),
         "deconnexion" => array("Se déconnecter", "Déconnectez vous de votre compte", ""),
-        "comptes/dashboard" => array("Gérez votre compte", "Gérez votre compte", ""),
-        "comptes/dashboard" => array("Gérez votre compte", "Gérez votre compte", ""),
+        "compte/dashboard" => array("Gérez votre compte", "Gérez votre compte", ""),
+        "compte/dashboard" => array("Gérez votre compte", "Gérez votre compte", ""),
+        "compte/virements/nouveau" => array("Effectuer un nouveau virement", "Effectuer un nouveau virement", "nouveau virement")
     );

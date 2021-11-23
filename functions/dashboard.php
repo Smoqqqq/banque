@@ -8,7 +8,7 @@ $result = $query->fetchAll(PDO::FETCH_OBJ);
 
 if ($result) {
     foreach ($result as $data) { ?>
-        <a href="<?= $routes['comptes/compte'] ?>?account=<?= $data->id ?>" class="account">
+        <a href="<?= $routes['compte/compte'] ?>?account=<?= $data->id ?>" class="account">
             <p>compte : <?= $data->name ?></p>
             <p>Balance : <?= $data->balance ?></p>
         </a>

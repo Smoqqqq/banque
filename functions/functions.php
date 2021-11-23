@@ -44,3 +44,9 @@ function getClientId(){
     $result = $query->fetch(PDO::FETCH_OBJ);
     return intval($result->id);
 }
+
+function getRoute($route){
+    global $base;
+    global $routes;
+    return $base . $routes[$route];
+}

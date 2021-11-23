@@ -19,7 +19,7 @@ if(isset($_POST['login'])){
         redirectNotification($message);
     } else {
         $message = "Identifiants incorrect";
-        redirectNotification($message, $routes['connexion']);
+        redirectNotification($message, getRoute('connexion'));
     }
 
 }

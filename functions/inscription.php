@@ -54,13 +54,13 @@ if (isset($_POST['register'])) {
             //redirectNotification($message);
         } else {
             $message = "Erreur: cette addresse email est déja utilisée !";
-            $redirect = $routes['inscription'];
+            $redirect = getRoute('inscription');
 
             redirectNotification($message, $redirect);
         }
     } else {
         $message = "Erreur: Les mots de passe ne correspondent pas !";
-        $redirect = $routes['inscription'];
+        $redirect = getRoute('inscription');
 
         redirectNotification($message, $redirect);
     }
