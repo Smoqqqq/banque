@@ -1,5 +1,5 @@
 <?php
-    include "functions/account.php"
+    include "functions/balance.php";
 ?>
 
 <div class="container-fluid princCartes">
@@ -12,6 +12,8 @@
         <div> 
             <img src="assets/img/blackcard01.png" alt="carte black">
             <p> Découvrez la carte Black Platinum pour frimer à l'étranger <p>
+
+
         </div> 
     </div>
 </div>
