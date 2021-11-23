@@ -53,10 +53,10 @@ function getRoute($route){
     return $base . $routes[$route];
 }
 
-function getUser(){
+function getUser($userId = null){
     global $dbh;
     if(isset($_SESSION['user-id'])){
-        $id = intval($_SESSION['user-id']);
+        $id = ($userId == null) ? intval($_SESSION['user-id']) : $userId;
         $sql = "SELECT * FROM user WHERE id = :id";
         $query = $dbh->prepare($sql);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
@@ -68,10 +68,10 @@ function getUser(){
     return false;
 }
 
-function getUserAccount(){
+function getUserAccount($userId = null){
     global $dbh;
     if(isset($_SESSION['user-id'])){
-        $id = intval($_SESSION['user-id']);
+        $id = ($userId == null) ? intval($_SESSION['user-id']) : $userId;
         $sql = "SELECT * FROM account WHERE user = :id";
         $query = $dbh->prepare($sql);
         $query->bindParam(":id", $id, PDO::PARAM_INT);
