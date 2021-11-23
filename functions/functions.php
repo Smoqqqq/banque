@@ -1,18 +1,20 @@
 <?php
 
 
-function redirectNotification($message, $redirect = null){
+function redirectNotification($message, $redirect = null, $class = "success"){
     global $routes;
     if(!$redirect) $redirect = $routes['home'];
     $message = base64_encode($message);
-    header("Location: $redirect?message=$message");
+    header("Location: $redirect?message=$message&class=$class");
+    echo "<script>location.href=$redirect?message=$message&class=$class</script>";
 }
 
 function printNotification(){
     if(isset($_GET['message'])){ 
         $message = base64_decode($_GET['message']);
+        if(isset($_GET['class'])) $class = $_GET['class'];
         ?>
-        <div class="notification">
+        <div class="notification <?= $class ?>">
             <p><?=$message?></p>
         </div>
 
@@ -49,4 +51,34 @@ function getRoute($route){
     global $base;
     global $routes;
     return $base . $routes[$route];
+}
+
+function getUser(){
+    global $dbh;
+    if(isset($_SESSION['user-id'])){
+        $id = intval($_SESSION['user-id']);
+        $sql = "SELECT * FROM user WHERE id = :id";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+
+        $result = $query->fetchAll();
+        return $result[0];
+    }
+    return false;
+}
+
+function getUserAccount(){
+    global $dbh;
+    if(isset($_SESSION['user-id'])){
+        $id = intval($_SESSION['user-id']);
+        $sql = "SELECT * FROM account WHERE user = :id";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+
+        $result = $query->fetchAll();
+        return $result[0];
+    }
+    return false;
 }
