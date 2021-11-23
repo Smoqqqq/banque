@@ -22,7 +22,7 @@ if (isset($_POST['register'])) {
 
         $address = $_POST['number'] . " " . $_POST['street'] . " " . $_POST['city'];
 
-        $sql = "SELECT * FROM users WHERE email = :email";
+        $sql = "SELECT * FROM user WHERE email = :email";
 
         $query = $dbh->prepare($sql);
         $query->bindParam(":email", $email, PDO::PARAM_STR);
@@ -32,7 +32,7 @@ if (isset($_POST['register'])) {
         $result = $query->fetch(PDO::FETCH_OBJ);
 
         if (!$result) {
-            $sql = "INSERT INTO users VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth)";
+            $sql = "INSERT INTO user VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth)";
 
             $query = $dbh->prepare($sql);
             $query->bindParam(":email", $email, PDO::PARAM_STR);
