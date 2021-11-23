@@ -37,7 +37,7 @@ function asset($asset){
 function getClientId(){
     global $dbh;
     $login = $_SESSION['login'];
-    $sql = "SELECT id FROM users WHERE email = :email";
+    $sql = "SELECT id FROM user WHERE email = :email";
     $query = $dbh->prepare($sql);
     $query->bindParam(":email", $login, PDO::PARAM_STR);
     $query->execute();
