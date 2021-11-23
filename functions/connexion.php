@@ -16,6 +16,7 @@ if(isset($_POST['login'])){
     if($password == $result->pass){
         $message = "Connexion effectué";
         $_SESSION['login'] = $result->email;
+        $_SESSION['user-id'] = $result->id;
         redirectNotification($message);
     } else {
         $message = "Identifiants incorrect";
