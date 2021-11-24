@@ -54,11 +54,11 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
@@ -75,10 +75,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `users`
+-- Déchargement des données de la table `user`
 --
 
-INSERT INTO `users` (`ID`, `email`, `pass`, `role`, `created_at`, `type`, `country`, `address`, `civility`, `firstname`, `lastname`, `date_of_birth`) VALUES
+INSERT INTO `user` (`ID`, `email`, `pass`, `role`, `created_at`, `type`, `country`, `address`, `civility`, `firstname`, `lastname`, `date_of_birth`) VALUES
 (3, 'paul.leflem@icloud.com', '582e64aa5c5718f2efb26b35052e877e768af1bd492c9c2f464770a8235cff3b', 'ROLE_USER', '14/10/2021', 'Compte individuel', 'France', '6 De l\'Hermite Milly La ForÃªt', 'Monsieur', 'Paul', 'Le Flem', '2002-04-09');
 COMMIT;
 

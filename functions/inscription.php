@@ -11,7 +11,8 @@ if (isset($_POST['register'])) {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $civility = $_POST['civility'];
-    $type = $_POST['account_type'];
+    /* $type = $_POST['account_type']; */
+    $type = "UNDEFINED_ACCOUNT_TYPE";
     $date_of_birth = $_POST['date_of_birth'];
 
     $password = $_POST['password'];

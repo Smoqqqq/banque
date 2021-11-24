@@ -63,7 +63,9 @@ function getUser($userId = null){
         $query->execute();
 
         $result = $query->fetchAll();
-        return $result[0];
+        if($result){
+            return $result[0];
+        }
     }
     return false;
 }
@@ -78,7 +80,10 @@ function getUserAccount($userId = null){
         $query->execute();
 
         $result = $query->fetchAll();
-        return $result[0];
+        if($result){
+            return $result[0];
+        }
+        return false;
     }
     return false;
 }

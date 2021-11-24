@@ -1,5 +1,5 @@
 body{
-    background: #F7F7F7;
+/*     background: #F7F7F7; */
     margin: 0px;
     padding-top: 80px;
 }
@@ -30,7 +30,8 @@ body{
 
 .card{
     border-radius: 10px;
-    box-shadow: 0px 0px 25px #686868;
+    padding: 15px;
+    overflow: hidden;
 }
 
 .cartedroite{
@@ -66,10 +67,16 @@ body{
     align-items: center;
 }
 
-.card{
-    padding: 15px;
-}
-
 .text-right{
     text-align: right;
+}
+
+.btn-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .btn{
+        margin: 0px 5px;
+    }
 }

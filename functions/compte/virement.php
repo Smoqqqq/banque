@@ -1,7 +1,10 @@
 <?php
 
+
 $user = getUser();
 $userAccount = getUserAccount();
+
+if($userAccount == null) header("location: " . getRoute("compte/nouveau"));
 
 if(isset($_POST['transfer'])){
     if(!isset($_POST['amount']) || empty($_POST['amount']) || !isset($_POST['to']) || empty($_POST['to'])){
