@@ -8,7 +8,7 @@ if($userAccount == null) header("location: " . getRoute("compte/nouveau"));
 
 if(isset($_POST['transfer'])){
     if(!isset($_POST['amount']) || empty($_POST['amount']) || !isset($_POST['to']) || empty($_POST['to'])){
-        redirectNotification("Veuillez remplir les champs du formulaire !", getRoute("compte/virements/nouveau"), "error");
+        redirectNotification("Veuillez remplir les champs du formulaire !", getRoute("compte/virements/nouveau"), "danger");
     } else {
         $to = $_POST['to'];
         $amount = $_POST['amount'];
@@ -20,10 +20,26 @@ if(isset($_POST['transfer'])){
 function makeTransfer($user, $to, $amount){
     global $dbh;
     $to = intval($to);
-    $userFromId = $user['ID'];
+    $userFromId = intval($user['ID']);
     $userFromAccount = getUserAccount();
-    
+
+    if(intval($userFromAccount["balance"] + $amount) < 0){
+        redirectNotification("Immpossible d'éffectuer le virement: <b>solde insuffisant</b>", "", "danger");
+        die();
+    }
+
     $userToAccount = getUserAccount($to);
+
+    if(!getUser($to)){
+        redirectNotification("Cet utilisateur n'éxiste pas !", "", "danger");
+        die();
+    } else if (!getUserAccount($to)) {
+        redirectNotification("Le compte spécifié éxiste en tant qu'utilisateur mais n'as pas de compte bancaire associé !", "", "danger");
+        die();
+    } else if ($userFromId == $to){
+        redirectNotification("Il est impossible de virer de l'argent vers votre compte personnel", "", "danger");
+        die();
+    }
 
     $date = date("d/m/Y H:m");
 

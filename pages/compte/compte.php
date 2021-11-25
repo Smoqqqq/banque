@@ -2,7 +2,7 @@
 include('functions/compte.php');
 ?>
 <div class="container-fluid princCompte py-5">
-    <div class="contenue my-5 px-4 pb-2">
+    <div class="card my-5">
         <div class="text-left my-4">
             <a href="<?= getRoute('compte/virements/nouveau'); ?>" class="btn btn-outline-primary">Faire un virement</a>
         </div>
