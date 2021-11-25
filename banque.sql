@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 10 nov. 2021 à 10:50
+-- Généré le : mer. 24 nov. 2021 à 21:42
 -- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Version de PHP : 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,41 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `account`
+-- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `account`;
-CREATE TABLE IF NOT EXISTS `account` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` int(11) NOT NULL,
-  `balance` float NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `transaction`
---
-
-DROP TABLE IF EXISTS `transaction`;
-CREATE TABLE IF NOT EXISTS `transaction` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `account_id` int(11) NOT NULL,
-  `to_account` int(11) NOT NULL,
-  `from_account` int(11) NOT NULL,
-  `value` float NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
@@ -75,10 +45,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `users`
+-- Déchargement des données de la table `user`
 --
 
-INSERT INTO `users` (`ID`, `email`, `pass`, `role`, `created_at`, `type`, `country`, `address`, `civility`, `firstname`, `lastname`, `date_of_birth`) VALUES
+INSERT INTO `user` (`ID`, `email`, `pass`, `role`, `created_at`, `type`, `country`, `address`, `civility`, `firstname`, `lastname`, `date_of_birth`) VALUES
 (3, 'paul.leflem@icloud.com', '582e64aa5c5718f2efb26b35052e877e768af1bd492c9c2f464770a8235cff3b', 'ROLE_USER', '14/10/2021', 'Compte individuel', 'France', '6 De l\'Hermite Milly La ForÃªt', 'Monsieur', 'Paul', 'Le Flem', '2002-04-09');
 COMMIT;
 

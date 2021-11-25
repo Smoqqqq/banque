@@ -8,16 +8,16 @@
             </svg>
         </div>
         <div class="row num22">
-            <h3>Inscription</h3>
+            <h3>Créer un compte utilisateur</h3>
         </div>
         <div class="row num44">
             <div class="col-sm-6">
-                <h3>Je souhaite ouvrir un :</h3>
+                <!-- <h3>Je souhaite ouvrir un :</h3>
                 <label for="account_type" class="form-label">Type de compte</label>
                 <select name="account_type" id="account_type" class="form-control">
                     <option value="Compte individuel">Compte individuel</option>
                     <option value="Compte joint">Compte joint</option>
-                </select>
+                </select> -->
                 <label for="country" class="form-label">Pays de naissance</label>
                 <select name="country" id="country" class="form-control">
                     <option value="France">France</option>

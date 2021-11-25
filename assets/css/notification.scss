@@ -1,0 +1,14 @@
+.notification{
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    background: $green;
+    border-radius: 10px;
+    z-index: 9999;
+    p{
+        margin: 10px 15px;
+    }
+    &.error{
+        background: #f8d7da;
+    }
+}
