@@ -11,6 +11,7 @@
         "logout" => "deconnexion",
         "compte/compte" => "compte/compte",
         "compte/virements/nouveau" => "compte/virements/nouveau",
+        "compte/virements/historique" => "compte/virements/historique",
         "404" => "404"
     );
 
@@ -28,5 +29,6 @@
         "deconnexion" => array("Se déconnecter", "Déconnectez vous de votre compte", ""),
         "compte/nouveau" => array("Créez votre compte", "Créez votre compte", ""),
         "compte/virements/nouveau" => array("Effectuer un nouveau virement", "Effectuer un nouveau virement", "nouveau virement"),
+        "compte/virements/historique" => array("Historique de vos transactions", "Historique de vos transactions", ""),
         "404" => array("Erreur 404", "Erreur 404", "")
     );

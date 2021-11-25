@@ -3,7 +3,7 @@
 ?>
 
 <div class="container-fluid princCartes">
-    <div class="contenue">
+    <div class="card">
         <h1>Mes cartes :</h1>
         <div> 
             <img src="assets/img/goldcard.png" alt="goldcard">

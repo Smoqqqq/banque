@@ -2,16 +2,17 @@
 
 <div class="container-fluid pagePrinc1">
     <form class="carteInscription" method="POST">
+        <div class="row num22 mt-3">
+            <h3>Créer un compte utilisateur</h3>
+        </div>
         <div class="row num11">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
             </svg>
         </div>
-        <div class="row num22">
-            <h3>Créer un compte utilisateur</h3>
-        </div>
         <div class="row num44">
             <div class="col-sm-6">
+                <h3>&nbsp;</h3>
                 <!-- <h3>Je souhaite ouvrir un :</h3>
                 <label for="account_type" class="form-label">Type de compte</label>
                 <select name="account_type" id="account_type" class="form-control">
@@ -31,6 +32,8 @@
                 <input type="number" name="number" id="number" placeholder="Numéro" class="form-control">
                 <label for="password" class="form-label">Mot de passe</label>
                 <input class="form-control" type="password" name="password" id="password" placeholder="Mot2p4s5eC@mpl1qu3">
+                <label for="verify_password" class="form-label">Vérification du mot de passe</label>
+                <input class="form-control" type="password" name="verify_password" id="password_verification" placeholder="Mot2p4s5eC@mpl1qu3">
             </div>
             <div class="col-sm-6">
                 <h3>Titulaire :</h3>
@@ -47,12 +50,10 @@
                 <input type="date" name="date_of_birth" class="form-control" id="date">
                 <label for="email" class="form-label">Adresse E-mail</label>
                 <input type="text" name="email" id="email" class="form-control" placeholder="E-mail">
-                <label for="verify_password" class="form-label">Vérification du mot de passe</label>
-                <input class="form-control" type="password" name="verify_password" id="password_verification" placeholder="Mot2p4s5eC@mpl1qu3">
+                <div class="text-righ">
+                    <button type="submit" name="register" class="btn btn-outline-primary" style="display: block;width: 100%; margin-top: 42px">S'inscrire</button>
+                </div>
             </div>
-        </div>
-        <div class="row num55">
-            <button type="submit" name="register">S'inscrire</button>
         </div>
     </form>
 </div>

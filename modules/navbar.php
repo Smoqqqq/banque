@@ -42,4 +42,4 @@
             <?php } ?>
         </div>
     </div>
-</div>
+</nav>
