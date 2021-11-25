@@ -5,6 +5,7 @@ include('functions/compte.php');
     <div class="card my-5">
         <div class="text-left my-4">
             <a href="<?= getRoute('compte/virements/nouveau'); ?>" class="btn btn-outline-primary">Faire un virement</a>
+            <a href="<?= getRoute('compte/virements/historique'); ?>" class="btn btn-outline-primary">Historique des virements</a>
         </div>
         <h1>Mon compte :</h1>
         <h3>Information personnelles :</h3>

@@ -1,8 +1,11 @@
-<?php include("functions/compte/virement.php"); ?>
+<?php include("functions/compte/virements/nouveau.php"); ?>
 
 <div class="container my-5">
     <h1 class="my-5">Virements</h1>
     <div class="card">
+        <div class="text-left my-4">
+            <a href="<?= getRoute('compte/compte'); ?>" class="btn btn-outline-primary">Retour au compte</a>
+        </div>
         <div class="row">
             <div class="col-sm-6">
                 <h2>Nouveau virement</h2>
@@ -33,7 +36,7 @@
                                     <button onclick="closeModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Souhaitez vous vraiment virer <e id="amount"></e> au compte <e id="account"></e>
+                                    <p>Souhaitez vous vraiment virer <e id="amount"></e>€ au compte <e id="account"></e>
                                     </p>
                                 </div>
                                 <div class="modal-footer">
@@ -103,14 +106,11 @@
             setTimeout(() => {
                 let notifications = document.getElementsByClassName("notification");
 
-                for (let i = 0; i < notification_toggle.length; i++) {
-                    notifications[i].classList.add("hide");
-                    let index = i;
-                    setTimeout(() => {
-                        notification[index].remove()
-                    }, 1000);
-                }
-            }, 9500);
+                notifications[0].classList.add("hide");
+                setTimeout(() => {
+                    notifications[0].remove()
+                }, 1000);
+            }, 9000);
         }
     }
 

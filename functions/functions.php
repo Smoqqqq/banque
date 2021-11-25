@@ -31,10 +31,11 @@ function printNotification()
             setTimeout(() => {
                 let notifications = document.getElementsByClassName("notification");
 
-                for (let i = 0; i < notification_toggle.length; i++) {
-                    notifications[i].classList.add("hide");
-                }
-            }, 9500);
+                notifications[0].classList.add("hide");
+                setTimeout(() => {
+                    notifications[0].remove();
+                }, 1000)
+            }, 9000);
         </script>
 <?php }
 }
