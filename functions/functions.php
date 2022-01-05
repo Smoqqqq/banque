@@ -7,7 +7,7 @@ function redirectNotification($message, $redirect = null, $class = "success")
     if (!$redirect) $redirect = $routes['home'];
     $message = base64_encode($message);
     header("Location: $redirect?message=$message&class=$class");
-    echo "<script>location.href=$redirect?message=$message&class=$class</script>";
+    echo "<script>location.href='$redirect?message=$message&class=$class'</script>";
 }
 
 function printNotification()
@@ -107,4 +107,10 @@ function getUserAccount($userId = null)
         return false;
     }
     return false;
+}
+
+function dd($data){
+    var_dump($data);
+    echo "<script>document.getElementById('navbar').style.display='none'</script>";
+    die();
 }

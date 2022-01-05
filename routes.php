@@ -4,7 +4,6 @@
         "home" => "",
         "inscription" => "inscription",
         "connexion" => "connexion",
-        "carte" => "carte",
         "compte/compte" => "compte/compte",
         "compte/nouveau" => "compte/nouveau",
         "mescartes" => "mescartes",
@@ -21,6 +20,7 @@
         //page => meta title, meta description, meta keywords
         "home" => array("Accueil - Fortnua banque", "Accueil - Fortnua banque", "Accueil - Fortnua banque"),
         "inscription" => array("Inscription", "Ouvrez votre compte", ""),
+        "inscription-new" => array("Inscription", "Ouvrez votre compte", ""),
         "logout" => array("Déconnexion", "Déconnexion", ""),
         "connexion" => array("Connexion", "Connectez vous !", ""),
         "carte" => array("carte", "Obtenir une carte bancaire", ""),
