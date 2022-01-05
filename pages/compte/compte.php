@@ -66,6 +66,11 @@ include('functions/compte.php');
                     <td colspan="2">Date de création du compte:</td>
                     <td><?= $result->created_at ?> </td>
                 </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td colspan="2">Numéro de compte</td>
+                    <td>cp_<?= $result->ID ?>_<?= $accountId ?> </td>
+                </tr>
             </tbody>
         </table>
     </div>

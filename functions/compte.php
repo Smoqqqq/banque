@@ -8,3 +8,5 @@
     $query->execute();
 
     $result = $query->fetch(PDO::FETCH_OBJ);
+
+    $accountId = getUserAccount()["id"];

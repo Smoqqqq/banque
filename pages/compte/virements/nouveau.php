@@ -67,7 +67,7 @@
     let account = document.getElementById("account");
 
     function fillModal(e) {
-        if (formAmount.value > 0 && formAccount.value > 0) {
+        if (formAmount.value > 0 && formAccount.value.length > 0) {
             document.getElementById('notification_erreur')?.remove();
             amount.innerText = formAmount.value;
             account.innerText = formAccount.value;

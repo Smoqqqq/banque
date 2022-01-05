@@ -33,7 +33,7 @@ if (isset($_POST['register'])) {
         $result = $query->fetch(PDO::FETCH_OBJ);
 
         if (!$result) {
-            $sql = "INSERT INTO user VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth)";
+            $sql = "INSERT INTO user VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth, NULL)";
 
             $query = $dbh->prepare($sql);
             $query->bindParam(":email", $email, PDO::PARAM_STR);
@@ -52,7 +52,7 @@ if (isset($_POST['register'])) {
 
             $message = "Votre compte à bien été crée !";
 
-            //redirectNotification($message);
+            redirectNotification($message, getRoute("home"));
         } else {
             $message = "Erreur: cette addresse email est déja utilisée !";
             $redirect = getRoute('inscription');

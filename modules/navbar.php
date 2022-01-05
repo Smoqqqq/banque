@@ -35,7 +35,7 @@
         <div class="col-4  header-right">
             <?php if (isset($_SESSION['login'])) { ?>
                 <a href="<?= getRoute('compte/compte') ?>">Mon compte</a>
-                <a class="connexion" href="<?= $routes['logout'] ?>">Déconnexion</a>
+                <a class="connexion" href="<?= getRoute("logout"); ?>">Déconnexion</a>
             <?php } else { ?>
                 <a href="<?= getRoute('connexion') ?>">Déja client ?</a>
                 <a class="connexion" href="<?= getRoute('inscription') ?>">Inscription</a>

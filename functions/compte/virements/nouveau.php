@@ -19,6 +19,9 @@ if(isset($_POST['transfer'])){
 
 function makeTransfer($user, $to, $amount){
     global $dbh;
+    global $userAccount;
+
+    $to = explode("_", $to)[1];
     $to = intval($to);
     $userFromId = intval($user['ID']);
     $userFromAccount = getUserAccount();
@@ -46,12 +49,15 @@ function makeTransfer($user, $to, $amount){
     $userFromBalance = intval($userFromAccount['balance']);
     $userFromBalance = $userFromBalance - intval($amount);
 
-    $sql = "INSERT INTO `transaction` (`id`, `to_account`, `from_account`, `amount`, `creation_date`) VALUES (NULL, :to_account, :from_account, :amount, :creation_date)";
+    $userFromCode = "cp_" . $userFromId . "_" . $userAccount["id"];
+
+    $toCode = "cp_" . $to . "_" . $userToAccount["id"];
+
+    $sql = "INSERT INTO `transaction` (`id`, `to_account`, `from_account`, `amount`, `created_at`) VALUES (NULL, :to_account, :from_account, :amount, NOW())";
     $query = $dbh->prepare($sql);
-    $query->bindParam(":to_account", $to, PDO::PARAM_INT);
-    $query->bindParam(":from_account", $userFromId, PDO::PARAM_INT);
+    $query->bindParam(":to_account", $toCode, PDO::PARAM_STR);
+    $query->bindParam(":from_account", $userFromCode, PDO::PARAM_STR);
     $query->bindParam(":amount", $amount, PDO::PARAM_STR);
-    $query->bindParam(":creation_date", $date, PDO::PARAM_STR);
 
     $query->execute();
 

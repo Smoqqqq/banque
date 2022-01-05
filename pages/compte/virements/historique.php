@@ -24,7 +24,7 @@
                     <p><?= $transaction->to_account; ?></p>
                 </div>
                 <div class="col-4 text-center">
-                    <p><?= $transaction->creation_date; ?></p>
+                    <p><?= $transaction->created_at; ?></p>
                 </div>
                 <div class="col-4 text-right">
                     <p><?= $transaction->amount; ?></p>
