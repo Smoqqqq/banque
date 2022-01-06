@@ -93,23 +93,22 @@ function getUser($userId = null)
 function getUserAccount($userId = null)
 {
     global $dbh;
-    if (isset($_SESSION['user-id'])) {
-        $id = ($userId == null) ? intval($_SESSION['user-id']) : $userId;
-        $sql = "SELECT * FROM account WHERE user = :id";
-        $query = $dbh->prepare($sql);
-        $query->bindParam(":id", $id, PDO::PARAM_INT);
-        $query->execute();
+    $id = ($userId == null) ? intval($_SESSION['user-id']) : $userId;
+    $sql = "SELECT * FROM account WHERE user = :id";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(":id", $id, PDO::PARAM_INT);
+    $query->execute();
 
-        $result = $query->fetchAll();
-        if ($result) {
-            return $result[0];
-        }
-        return false;
+    $result = $query->fetchAll();
+    if ($result) {
+        return $result[0];
     }
+    return false;
     return false;
 }
 
-function dd($data){
+function dd($data)
+{
     var_dump($data);
     echo "<script>document.getElementById('navbar').style.display='none'</script>";
     die();

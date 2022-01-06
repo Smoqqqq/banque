@@ -11,7 +11,10 @@
         "compte/compte" => "compte/compte",
         "compte/virements/nouveau" => "compte/virements/nouveau",
         "compte/virements/historique" => "compte/virements/historique",
-        "404" => "404"
+        "trouver-mes-amis" => "trouver-mes-amis",
+
+        "404" => "404",
+        /* "fixtures" => "fixtures" */
     );
 
     $description_default = "";
@@ -30,5 +33,8 @@
         "compte/nouveau" => array("Créez votre compte", "Créez votre compte", ""),
         "compte/virements/nouveau" => array("Effectuer un nouveau virement", "Effectuer un nouveau virement", "nouveau virement"),
         "compte/virements/historique" => array("Historique de vos transactions", "Historique de vos transactions", ""),
-        "404" => array("Erreur 404", "Erreur 404", "")
+        "trouver-mes-amis" => array("Trouvez vos contacts via la recherche !", "Trouvez vos contacts via la recherche !", "recherche"),
+        
+        "404" => array("Erreur 404", "Erreur 404", ""),
+        /* "fixtures" => array("Erreur 404", "Erreur 404", ""), */
     );
