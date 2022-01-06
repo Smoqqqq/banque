@@ -14,24 +14,28 @@ if (isset($_POST['rechargement'])) {
         if (strlen($amount) == 6) {
             if (strtolower(substr($amount, 0, 1)) == strtolower(substr($userName, 0, 1))) {
                 $amount = substr($amount, 1, 5);
-                $balance = $userAccount["balance"] + $amount;
+                    if (is_numeric($amount)) {
+                    $balance = $userAccount["balance"] + $amount;
 
-                $sql = "UPDATE account SET balance = :balance WHERE user = :userid";
-                $query = $dbh->prepare($sql);
-                $query->bindParam(":balance", $balance, PDO::PARAM_INT);
-                $query->bindParam(":userid", $userId, PDO::PARAM_INT);
-                $query->execute();
+                    $sql = "UPDATE account SET balance = :balance WHERE user = :userid";
+                    $query = $dbh->prepare($sql);
+                    $query->bindParam(":balance", $balance, PDO::PARAM_INT);
+                    $query->bindParam(":userid", $userId, PDO::PARAM_INT);
+                    $query->execute();
 
-                $message = "Rechargement de $amount € effectué !";
+                    $message = "Rechargement de $amount € effectué !";
 
-                redirectNotification($message, getRoute("compte/compte"));
+                    redirectNotification($message, getRoute("compte/compte"));
+                } else {
+                    redirectNotification("Le code est incorrect", getRoute("compte/rechargement"), "danger");
+                }
             } else {
-                redirectNotification("Le code est partiel ou incorrect", getRoute("compte/rechargement"), "danger");
+                redirectNotification("Le code est incorrect", getRoute("compte/rechargement"), "danger");
             }
         } else {
-            redirectNotification("Le code est partiel ou incorrect", getRoute("compte/rechargement"), "danger");
+            redirectNotification("Le code n'est pas complet", getRoute("compte/rechargement"), "danger");
         }
     } else {
-        redirectNotification("Le code n'existe pas.", getRoute("compte/rechargement"), "danger");
+        redirectNotification("Le code est incorrect", getRoute("compte/rechargement"), "danger");
     }
 }

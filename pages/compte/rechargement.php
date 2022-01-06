@@ -36,12 +36,12 @@ isGranted();
     input.addEventListener("keyup", (e) => {
         if (e.code != "Backspace" && input.value.length > 0 && input.value.length < 18) {
             input.value += "-";
+            if (input.value.length == 6) {
+                input.value += "&";
+                input.value += "-";
+            }
         } else if (input.value.length > 19) {
             input.value = input.value.slice(0, -1);
-        }
-        if (input.value.length == 6) {
-            input.value += "&";
-            input.value += "-";
         }
         if (input.value.length == 19) {
             document.getElementById("btn").classList.remove("disabled");
