@@ -1,4 +1,4 @@
-<?php include("functions/inscription.php"); ?>
+<?php include("functions/compte/inscription.php"); ?>
 
 <div id="content-wrap">
     <form method="post" id="register-form">

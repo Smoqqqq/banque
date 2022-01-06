@@ -17,5 +17,13 @@
                 }, 1000);
             })
         }
+
+        let guides = document.getElementsByClassName("guide");
+
+        for(let i = 0; i < guides.length; i++){
+            guides[i].addEventListener("click", () => {
+                guides[i].classList.add("hide");
+            })
+        }
     })
 </script>

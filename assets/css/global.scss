@@ -1,14 +1,14 @@
-body{
-/*     background: #F7F7F7; */
+body {
+    /*     background: #F7F7F7; */
     margin: 0px;
     /* padding-top: 80px; */
 }
 
-.form-label{
+.form-label {
     margin-top: 10px;
 }
 
-.button{
+.button {
     background-color: rgba(0, 128, 0, 0);
     color: $green;
     padding: 10px 15px;
@@ -21,14 +21,14 @@ body{
     text-decoration: none;
     color: white;
     margin-top: 50px;
-    &:hover{
+    &:hover {
         transition: 0.4s;
         background-color: white;
         color: black;
     }
 }
 
-.card{
+.card {
     border-radius: 10px;
     padding: 15px;
     overflow: hidden;
@@ -36,62 +36,62 @@ body{
     box-shadow: 0px 0px 25px #d9d9d9;
 }
 
-.cartedroite{
+.cartedroite {
     background: rgba(0, 0, 0, 0.27);
     border: $green 2px solid;
-    h3{
+    h3 {
         color: white;
     }
-    h4{
+    h4 {
         text-align: center;
         color: white;
         font-size: 1.3em;
     }
 }
 
-.cartegauche{
+.cartegauche {
     background: rgba(0, 0, 0, 0.27);
     border: $green 2px solid;
-    h3{
+    h3 {
         color: white;
     }
-    h4{
+    h4 {
         text-align: center;
         color: white;
         font-size: 1.3em;
     }
 }
 
-.gauflex{
+.gauflex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.text-right{
+.text-right {
     text-align: right;
 }
 
-.btn-center{
+.btn-center {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    .btn{
+    .btn {
         margin: 0px 5px;
     }
 }
 
 .card-body {
     width: 30%;
-    h2{
+    h2 {
         text-align: center;
         font-size: 40px;
         margin-top: 50px;
         margin-bottom: 5px;
     }
-    ul.list{
+    ul.list {
         list-style: none;
         text-align: center;
     }
@@ -126,7 +126,7 @@ body{
         background: blue;
     }
     &.gold {
-        background: #F4D03F;
+        background: #f4d03f;
     }
     &::before {
         position: absolute;
@@ -208,4 +208,66 @@ body{
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
     }
+}
+
+.guide {
+    position: absolute;
+    right: 30px;
+    max-width: calc(100% - 30px);
+    top: calc(100% + 5px);
+    background: white;
+    color: black;
+    box-shadow: -5px -5px 15px #dddddd;
+    border-left: 1px solid $green;
+    padding: 10px;
+    p {
+        margin: 0px;
+    }
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-top-left-radius: 0px;
+    animation: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) guide ;
+    -webkit-animation: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) guide;
+    &::after {
+        position: absolute;
+        content: "X";
+        right: 15px;
+        top: 5px;
+    }
+    &.hide {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+@keyframes guide {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.btn.disabled{
+    opacity: 0.5 !important;
 }

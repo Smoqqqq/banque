@@ -113,3 +113,26 @@ function dd($data)
     echo "<script>document.getElementById('navbar').style.display='none'</script>";
     die();
 }
+
+function isGranted($redirect = true)
+{
+    global $dbh;
+
+    if (isset($_SESSION['user-id'])) {
+        $id = intval($_SESSION['user-id']);
+        $sql = "SELECT email FROM user WHERE ID = :id";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+        $user = $query->fetch(PDO::FETCH_OBJ);
+
+        if($user->email == $_SESSION['login']){
+            return true;
+        }
+    }
+
+    if($redirect) {
+        return redirectNotification("Vous devez être connecté pour accéder à cette page ...", getRoute("home"));
+    } 
+    return false;
+}

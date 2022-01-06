@@ -1,4 +1,7 @@
-<?php include("functions/compte/virements/nouveau.php"); ?>
+<?php
+include("functions/compte/virements/nouveau.php");
+isGranted();
+?>
 
 <div class="container my-5">
     <h1 class="my-5">Virements</h1>
@@ -20,7 +23,7 @@
                     <label for="amount" class="form-label">Montant</label>
                     <input type="text" name="amount" id="form_amount" class="form-control">
                     <label for="to" class="form-label">Transférer à</label>
-                    <input type="text" name="to" id="form_to" class="form-control">
+                    <input type="text" name="to" id="form_to" class="form-control" <?php if(isset($_GET['account_nb'])){ echo "value='" . $_GET['account_nb'] . "'"; } ?>>
                     <div class="text-right mt-4" id="target">
                         <button type="button" class="btn btn-outline-primary">
                             Virer l'argent

@@ -1,12 +1,9 @@
 <?php
 include('functions/compte.php');
+isGranted();
 ?>
 <div class="container-fluid princCompte py-5">
     <div class="card my-5">
-        <div class="text-left my-4">
-            <a href="<?= getRoute('compte/virements/nouveau'); ?>" class="btn btn-outline-primary">Faire un virement</a>
-            <a href="<?= getRoute('compte/virements/historique'); ?>" class="btn btn-outline-primary">Historique des virements</a>
-        </div>
         <h1>Mon compte :</h1><br>
         <?php
         
@@ -101,8 +98,8 @@ include('functions/compte.php');
                         <div class="table-col"><?= $result->created_at ?></div>
                     </div>
                     <div class="table-row">
-                        <div class="table-col">Type de compte</div>
-                        <div class="table-col"><?= $result->type ?></div>
+                        <div class="table-col">carte</div>
+                        <div class="table-col">Visa <?= $card ?></div>
                     </div>
                 </div>
             </div>

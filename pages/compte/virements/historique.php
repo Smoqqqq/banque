@@ -1,6 +1,10 @@
-<?php include("functions/compte/virements/historique.php"); ?>
+<?php
+include("functions/compte/virements/historique.php");
+isGranted();
+?>
 
 <div class="container my-5">
+    <div style="height:100px"></div>
     <h1 class="my-5">Historique des virements</h1>
     <div class="card">
         <div class="text-left my-4">
