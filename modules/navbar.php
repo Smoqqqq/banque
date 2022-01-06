@@ -1,6 +1,6 @@
 <nav id="navbar">
     <div class="row">
-        <div class="col-3 header-left">
+        <div class="col-2 header-left">
             <a href="<?= getRoute('home') ?>"><img src="<?= asset("assets/img/logo.png"); ?>" alt="">
                 <p>
                     <h3>
@@ -9,36 +9,32 @@
                 </p>
             </a>
         </div>
-        <div class="col-5  header-middle">
+        <div class="col-7  header-middle">
+            <?php if (isset($_SESSION['login'])) { ?>
+                <div class="col">
+                    <a href="<?= getRoute('compte/virements/nouveau') ?>">Virements</a>
+                </div>
+                <div class="col">
+                    <a href="<?= getRoute('compte/virements/historique') ?>">Historique</a>
+                </div>
+                <div class="col">
+                    <a href="<?= getRoute('compte/rechargement') ?>">Rechargement</a>
+                </div>
+            <?php } ?>
             <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#16db16" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" fill="#000" />
-                </svg>
-            </div>
-            <div class="col">
-                <a href="<?= getRoute('compte/compte') ?>">Mon compte</a>
-            </div>
-            <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#16db16" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" fill="#000" />
-                </svg>
-            </div>
-            <div class="col">
-                <a href="<?= getRoute('mescartes') ?>">Mes cartes</a>
-            </div>
-            <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" fill="#000" />
-                </svg>
+                <a href="<?= getRoute('trouver-mes-amis') ?>">Trouver mes amis</a>
             </div>
         </div>
-        <div class="col-4  header-right">
+        <div class="col-3  header-right">
             <?php if (isset($_SESSION['login'])) { ?>
                 <a href="<?= getRoute('compte/compte') ?>">Mon compte</a>
-                <a class="connexion" href="<?= $routes['logout'] ?>">Déconnexion</a>
+                <a class="connexion" href="<?= getRoute("logout"); ?>">Déconnexion</a>
             <?php } else { ?>
                 <a href="<?= getRoute('connexion') ?>">Déja client ?</a>
                 <a class="connexion" href="<?= getRoute('inscription') ?>">Inscription</a>
+                <div class="guide">
+                    <p>Vous êtes nouveau ici ?<br>Créez un compte ou connectez vous !</p>
+                </div>
             <?php } ?>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-$user = intval(getUser()["ID"]);
+$user = "cp_" . intval(getUser()["ID"]);
 
 $sql = "SELECT * FROM transaction WHERE from_account = :user";
 

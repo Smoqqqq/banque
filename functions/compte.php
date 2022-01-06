@@ -8,3 +8,17 @@
     $query->execute();
 
     $result = $query->fetch(PDO::FETCH_OBJ);
+
+    $accountId = (isset(getUserAccount()["id"])) ? getUserAccount()["id"] : false;
+
+    
+    if($result->account_nb == "NO_ACC_NUMBER"){
+        $id = $result->ID;
+        $acc_nb = "cp_" . $result->ID . "_$accountId";
+
+        $sql = "UPDATE user SET account_nb = :acc_nb WHERE ID = :id";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(":acc_nb", $acc_nb, PDO::PARAM_STR);
+        $query->bindParam(":id", $id, PDO::PARAM_STR);
+        $query->execute();
+    }

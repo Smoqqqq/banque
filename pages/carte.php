@@ -1,1 +1,0 @@
-<h2> Ouverture d'une carte bancaire </h2>

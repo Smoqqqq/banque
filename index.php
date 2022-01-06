@@ -30,7 +30,9 @@
 
     <?php include("modules/navbar.php"); ?>
 
-    <?php include $page ?>
+    <div id="page-wrapper">
+        <?php include $page ?>
+    </div>
 
     <?php include("js.php"); ?>
 </body>
