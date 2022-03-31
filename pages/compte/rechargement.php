@@ -10,7 +10,7 @@ isGranted();
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
                 <form method="post">
-                    <p class="text-center">Vous avez reçu lors de votre dépot un code à 10 caractères ; veuillez le renseigner.</p>
+                    <p class="text-center">Vous avez reçu lors de votre dépot un code à 12 caractères ; veuillez le renseigner.</p>
                     <input type="text" name="code_input" id="code_input" class="form-control mt-5 text-center" placeholder="1-2-3-&-X-4-5-6-7-8-9-0">
                     <p class="text-center"><small>Rechargement maxi de 9 999 999 €, contactez votre conseiller pour un montant supérieur</small></p>
                     <div class="text-right">
