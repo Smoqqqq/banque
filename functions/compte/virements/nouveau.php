@@ -26,6 +26,7 @@ function makeTransfer($user, $to, $amount){
     $userFromId = intval($user['ID']);
     $userFromAccount = getUserAccount();
 
+    // La personne à il les fond nécéssaires
     if(intval($userFromAccount["balance"] + $amount) < 0){
         redirectNotification("Immpossible d'éffectuer le virement: <b>solde insuffisant</b>", "", "danger");
         die();
