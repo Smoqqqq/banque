@@ -14,13 +14,13 @@ if (isset($_POST['register'])) {
         $created_at = date("d/m/Y");
         $role = "ROLE_USER";
         $country = $_POST['country'];
-
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $civility = $_POST['civility'];
         $type = $_POST['account_type'];
         $date_of_birth = $_POST['date_of_birth'];
         $card = $_POST['card-type-input'];
+        // $CHAMP = $_POST['CHAMP'];
 
         $password = $_POST['password'];
         $password_verify = $_POST['verify_password'];
@@ -41,6 +41,7 @@ if (isset($_POST['register'])) {
 
             if (!$result) {
                 $sql = "INSERT INTO user VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth, :acc_number)";
+                // $sql = "INSERT INTO user VALUES (NULL, :email, :password, :role, :created_at, :type, :country, :address, :civility, :firstname, :lastname, :date_of_birth, :acc_number, :CHAMP)";
 
                 $acc_nb = "NO_ACC_NUMBER";
 
@@ -52,6 +53,7 @@ if (isset($_POST['register'])) {
                 $query->bindParam(":type", $type, PDO::PARAM_STR);
                 $query->bindParam(":country", $country, PDO::PARAM_STR);
                 $query->bindParam(":address", $address, PDO::PARAM_STR);
+                // $query->bindParam(":CHAMP", $CHAMP, PDO::PARAM_STR);
                 $query->bindParam(":civility", $civility, PDO::PARAM_STR);
                 $query->bindParam(":firstname", $firstname, PDO::PARAM_STR);
                 $query->bindParam(":lastname", $lastname, PDO::PARAM_STR);

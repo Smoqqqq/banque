@@ -1,0 +1,10 @@
+virement : 
+
+on recupere la somme et le compte vers le quelle on transfert et on rajoutee l'argent vers le quelle on tranfert avec les ids de chaques compte 
+
+historique :
+
+base de donne avc tt les virements on sa prend les virements des comptes qui sont concerné 
+
+rechargement :
+

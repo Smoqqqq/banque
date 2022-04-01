@@ -76,6 +76,8 @@
             <input type="text" name="street" id="street" placeholder="Rue" class="form-control">
             <label for="number" class="form-label">Numéro</label>
             <input type="number" name="number" id="number" placeholder="Numéro" class="form-control">
+            <!-- <label for="number" class="form-label">CHAMP</label>
+            <input type="text" name="CHAMP" id="number" placeholder="CHAMP" class="form-control"> -->
             <div class="btn-box">
                 <a onclick="lastStep()" class="btn btn-outline-secondary ml-auto">Retour</a>
                 <a onclick="nextStep()" class="btn btn-outline-primary">Suivant</a>
