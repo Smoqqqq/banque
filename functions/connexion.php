@@ -11,16 +11,21 @@ if(isset($_POST['login'])){
 
     $query->execute();
 
-    $result = $query->fetch(PDO::FETCH_OBJ);
+    // L'utilisateur correspondant à l'email
+    $user = $query->fetch(PDO::FETCH_OBJ);
 
-    if($password == $result->pass){
-        $message = "Connexion effectué";
-        $_SESSION['login'] = $result->email;
-        $_SESSION['user-id'] = $result->ID;
-        redirectNotification($message, getRoute("compte/compte"));
+    if ($user) {
+        if ($password == $user->pass) {
+            $message = "Connexion effectué";
+            $_SESSION['login'] = $user->email;
+            $_SESSION['user-id'] = $user->ID;
+            redirectNotification($message, getRoute("compte/compte"));
+        } else {
+            $message = "Identifiants incorrect";
+            redirectNotification($message, getRoute('connexion'));
+        }
     } else {
-        $message = "Identifiants incorrect";
-        redirectNotification($message, getRoute('connexion'));
+        redirectNotification("Aucun compte ne correspond à cet email", getRoute('connexion'));
     }
 
 }

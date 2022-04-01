@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['register'])) {
+    // Si les champs sont bons
     if (
         isset($_POST['email']) && strlen($_POST['email']) > 0 &&
         isset($_POST['firstname']) && strlen($_POST['firstname']) > 0 &&

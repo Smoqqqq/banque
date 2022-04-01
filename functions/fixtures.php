@@ -1,5 +1,7 @@
 <?php
 
+// Pour créer les amis
+
 $firstnames = [
     "Jules",
     "Ines",
